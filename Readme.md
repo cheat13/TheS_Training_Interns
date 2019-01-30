@@ -57,7 +57,7 @@
             - ออกแบบ wireframe
         
     Process
-        - Check Homework*
+        - Check Homework* (Just in case)
         - Create Repo & add Collaborators
         - Create project ionic
         - Gen Page & Link Page & Binding data
