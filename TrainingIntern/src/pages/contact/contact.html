@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true">
+    <ion-slide *ngFor="let slide of slider" >
+
+        <ion-item text-center>
+          <img [src]="slide.image" />
+        </ion-item>
+
+ 
+        <ion-item>
+          <h2 [innerHTML]="slide.title"></h2>
+        </ion-item>
+
+    </ion-slide>
+  </ion-slides>
+</ion-content>
