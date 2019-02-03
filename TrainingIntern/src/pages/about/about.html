@@ -5,7 +5,64 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
+
+  <ion-item>
+    <ion-label fixed>ข้อความ</ion-label>
+    <ion-input type="text" [(ngModel)]="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>จำนวนครั้ง</ion-label>
+    <ion-input type="number" [(ngModel)]="number"></ion-input>
+  </ion-item>
+
+  <!-- <button ion-button disabled>test</button> -->
+
+  <button ion-button block [disabled]="false" (click)="test()">test</button>
+
+  <ion-item>
+    <ion-select interface="action-sheet" [(ngModel)]="keep" placeholder="Choose your gender">
+      <ion-label>
+        Choose your gender
+      </ion-label>
+      <ion-option value="1">Men</ion-option>
+      <ion-option value="2">Women</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <!-- 
+      *******ngSwitch/ngIf*******
+      <div [ngSwitch]="keep">
+      <div *ngSwitchCase="1">
+        
+        You are a Men.
+        
+      </div>
+      <div *ngSwitchCase="2">
+        
+        You are a Women.
+        
+      </div>
+    </div>
+    
+    
+      <div *ngIf="keep == 1">
+        
+        test You are a Men.
+        
+      </div>
+      <div *ngIf="keep == 2">
+        
+        test You are a Women.
+        
+      </div> -->
+
+
+  <!-- 
+        *******ngFor*******
+        <div *ngFor="let i of times">{{i}}</div> -->
+
 
 </ion-content>
