@@ -15,12 +15,24 @@
     </ion-item>
 
     <ion-list>
+
       <ion-item>
-        <ion-input type="text" placeholder="First Name" formControlName="firstName"></ion-input>
+        <ion-label fixed>First Name</ion-label>
+        <ion-input type="text" formControlName="firstName" [class.invalid]="isValid('firstName')"></ion-input>
       </ion-item>
+      <ion-item *ngIf="isValid('firstName')" text-right>
+        <span class="invalid-msg">Please fill in</span>
+      </ion-item>
+
       <ion-item>
-        <ion-input type="text" placeholder="Last Name" formControlName="lastName"></ion-input>
+        <ion-label fixed>Last Name</ion-label>
+        <ion-input type="text" formControlName="lastName" [class.invalid]="isValid('lastName')">
+        </ion-input>
       </ion-item>
+      <ion-item *ngIf="isValid('lastName')" text-right>
+        <span class="invalid-msg">Please fill in</span>
+      </ion-item>
+
     </ion-list>
 
     <ion-item>
@@ -31,18 +43,41 @@
 
     <div formGroupName="address">
       <ion-list>
+
         <ion-item>
-          <ion-input type="text" placeholder="Street" formControlName="street"></ion-input>
+          <ion-label fixed>Street</ion-label>
+          <ion-input type="text" formControlName="street" [class.invalid]="isValid('address.street')"></ion-input>
         </ion-item>
+        <ion-item *ngIf="isValid('address.street')" text-right>
+          <span class="invalid-msg">Please fill in</span>
+        </ion-item>
+
         <ion-item>
-          <ion-input type="text" placeholder="City" formControlName="city"></ion-input>
+          <ion-label fixed>City</ion-label>
+          <ion-input type="text" formControlName="city" [class.invalid]="isValid('address.city')">
+          </ion-input>
         </ion-item>
+        <ion-item *ngIf="isValid('address.city')" text-right>
+          <span class="invalid-msg">Please fill in</span>
+        </ion-item>
+
         <ion-item>
-          <ion-input type="text" placeholder="State" formControlName="state"></ion-input>
+          <ion-label fixed>State</ion-label>
+          <ion-input type="text" formControlName="state" [class.invalid]="isValid('address.state')">
+          </ion-input>
         </ion-item>
+        <ion-item *ngIf="isValid('address.state')" text-right>
+          <span class="invalid-msg">Please fill in</span>
+        </ion-item>
+
         <ion-item>
-          <ion-input type="text" placeholder="ZipCode" formControlName="zipCode"></ion-input>
+          <ion-label fixed>ZipCode</ion-label>
+          <ion-input type="text" formControlName="zipCode" [class.invalid]="isValid('address.zipCode')"></ion-input>
         </ion-item>
+        <ion-item *ngIf="isValid('address.zipCode')" text-right>
+          <span class="invalid-msg">Please fill in</span>
+        </ion-item>
+
       </ion-list>
     </div>
 
