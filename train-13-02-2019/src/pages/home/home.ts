@@ -27,15 +27,9 @@ export class HomePage {
   onSubmit() {
     console.log(this.user.value);
     console.log(this.user.valid);
-    this.submitRequested = true;
     if (this.user.valid) {
       this.navCtrl.push("DemoPage", { user: this.user.value });
     }
-  }
-
-  isValid(name: string): boolean {
-    var ctrl = this.user.get(name);
-    return ctrl.invalid && (ctrl.touched || this.submitRequested);
   }
 
 }
