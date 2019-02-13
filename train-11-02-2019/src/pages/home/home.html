@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Template Driven Forms</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="First Name" [(ngModel)]="user.firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Last Name" [(ngModel)]="user.lastName"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <h1>Address</h1>
+
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="street" [(ngModel)]="user.address.street"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="city" [(ngModel)]="user.address.city"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="state" [(ngModel)]="user.address.state"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="zipCode" [(ngModel)]="user.address.zipCode"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="onSubmit()">Submit</button>
+
+</ion-content>

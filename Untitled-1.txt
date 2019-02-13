@@ -1,0 +1,19 @@
+user info
+- firstName
+- lastName
+
+- address
+    - street
+    - city
+    - state
+    - zipCode
+
+- school 
+    - school name 
+    - GPA (less than 0.00 - 4.00)
+    - address 
+        - street
+        - city
+        - state
+        - zipCode
+

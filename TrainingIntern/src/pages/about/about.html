@@ -17,9 +17,6 @@
     <ion-input type="number" [(ngModel)]="number"></ion-input>
   </ion-item>
 
-  <!-- <button ion-button disabled>test</button> -->
-
-  <button ion-button block [disabled]="false" (click)="test()">test</button>
 
   <ion-item>
     <ion-select interface="action-sheet" [(ngModel)]="keep" placeholder="Choose your gender">
@@ -31,42 +28,38 @@
     </ion-select>
   </ion-item>
 
-  <div >
+  <div>
 
   </div>
 
+  <!-- *******ngSwitch/ngIf******* -->
+  <div [ngSwitch]="keep">
+    <div *ngSwitchCase="1">
 
-  <!-- 
-      *******ngSwitch/ngIf*******
-      <div [ngSwitch]="keep">
-      <div *ngSwitchCase="1">
-        
-        You are a Men.
-        
-      </div>
-      <div *ngSwitchCase="2">
-        
-        You are a Women.
-        
-      </div>
+      You are a Men.
+
     </div>
-    
-    
-      <div *ngIf="keep == 1">
-        
-        test You are a Men.
-        
-      </div>
-      <div *ngIf="keep == 2">
-        
-        test You are a Women.
-        
-      </div> -->
+    <div *ngSwitchCase="2">
+
+      You are a Women.
+
+    </div>
+  </div>
 
 
-  <!-- 
-        *******ngFor*******
-        <div *ngFor="let i of times">{{i}}</div> -->
+  <div *ngIf="keep == 1">
+
+    test You are a Men.
+
+  </div>
+  <div *ngIf="keep == 2">
+
+    test You are a Women.
+
+  </div>
+
+  <!-- *******ngFor******* -->
+  <div *ngFor="let i of times">{{i}}</div>
 
 
 </ion-content>

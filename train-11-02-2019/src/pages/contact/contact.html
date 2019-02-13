@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Reactive Form</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="user" (ngSubmit)="onSubmit()">
+
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="First Name" formControlName="firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Last Name" formControlName="lastName"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <h1>Address</h1>
+
+    <div formGroupName="address">
+      <ion-list>
+        <ion-item>
+          <ion-input type="text" placeholder="street" formControlName="street"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="city" formControlName="city"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="state" formControlName="state"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="zipCode" formControlName="zipCode"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <button ion-button block type="submit">Submit</button>
+
+  </form>
+
+</ion-content>
