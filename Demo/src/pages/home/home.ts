@@ -21,6 +21,16 @@ export class HomePage {
         'state': [null, Validators.required],
         'zipCode': [null, Validators.required],
       }),
+      'school': fb.group({
+        'schoolName': [null, Validators.required],
+        'gpa': [null, [Validators.required, Validators.min(0), Validators.max(4)]],
+        'schoolAddress': fb.group({
+          'street': [null, Validators.required],
+          'city': [null, Validators.required],
+          'state': [null, Validators.required],
+          'zipCode': [null, Validators.required],
+        })
+      })
     })
   }
 
