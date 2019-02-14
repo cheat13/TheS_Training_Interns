@@ -28,6 +28,16 @@ export class DemoPage {
         'state': [null, Validators.required],
         'zipCode': [null, Validators.required],
       }),
+      'school': fb.group({
+        'schoolName': [null, Validators.required],
+        'gpa': [null, Validators.required],
+        'schoolAddress': fb.group({
+          'street': [null, Validators.required],
+          'city': [null, Validators.required],
+          'state': [null, Validators.required],
+          'zipCode': [null, Validators.required],
+        })
+      })
     })
   }
 
@@ -36,7 +46,7 @@ export class DemoPage {
     let data = this.navParams.get('user');
     this.form.setValue(data);
     console.log(this.form.value);
-    
+
   }
 
 }

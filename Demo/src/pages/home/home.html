@@ -81,6 +81,82 @@
       </ion-list>
     </div>
 
+    <ion-item>
+      <ion-label>
+        <h1>School</h1>
+      </ion-label>
+    </ion-item>
+
+    <div formGroupName="school">
+
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>SchoolName</ion-label>
+          <ion-input type="text" formControlName="schoolName" [class.invalid]="isValid('school.schoolName')">
+          </ion-input>
+        </ion-item>
+        <ion-item *ngIf="isValid('school.schoolName')" text-right>
+          <span class="invalid-msg">Please fill in</span>
+        </ion-item>
+
+        <ion-item>
+          <ion-label fixed>GPA</ion-label>
+          <ion-input type="number" formControlName="gpa" [class.invalid]="isValid('school.gpa')"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="isValid('school.gpa')" text-right>
+          <span class="invalid-msg">Please fill in (0.00 - 4.00)</span>
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+        <ion-label>
+          <h1>School Address</h1>
+        </ion-label>
+      </ion-item>
+
+      <div formGroupName="schoolAddress">
+        <ion-list>
+
+          <ion-item>
+            <ion-label fixed>Street</ion-label>
+            <ion-input type="text" formControlName="street" [class.invalid]="isValid('school.schoolAddress.street')">
+            </ion-input>
+          </ion-item>
+          <ion-item *ngIf="isValid('school.schoolAddress.street')" text-right>
+            <span class="invalid-msg">Please fill in</span>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>City</ion-label>
+            <ion-input type="text" formControlName="city" [class.invalid]="isValid('school.schoolAddress.city')">
+            </ion-input>
+          </ion-item>
+          <ion-item *ngIf="isValid('school.schoolAddress.city')" text-right>
+            <span class="invalid-msg">Please fill in</span>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>State</ion-label>
+            <ion-input type="text" formControlName="state" [class.invalid]="isValid('school.schoolAddress.state')">
+            </ion-input>
+          </ion-item>
+          <ion-item *ngIf="isValid('school.schoolAddress.state')" text-right>
+            <span class="invalid-msg">Please fill in</span>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>ZipCode</ion-label>
+            <ion-input type="text" formControlName="zipCode" [class.invalid]="isValid('school.schoolAddress.zipCode')">
+            </ion-input>
+          </ion-item>
+          <ion-item *ngIf="isValid('school.schoolAddress.zipCode')" text-right>
+            <span class="invalid-msg">Please fill in</span>
+          </ion-item>
+
+        </ion-list>
+      </div>
+    </div>
+
     <button ion-button block type="submit">Submit</button>
 
   </form>
