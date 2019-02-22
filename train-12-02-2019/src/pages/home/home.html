@@ -38,7 +38,6 @@
       </ion-list>
     </ion-card>
 
-
     <ion-card>
       <ion-card-header>
         <ion-item>
@@ -48,45 +47,7 @@
       <!-- Address -->
       <div formGroupName="address">
         <ion-list>
-          <ion-item>
-            <ion-input type="text" placeholder="Street" formControlName="street"
-              [class.invalid]="isValid('address.street')"></ion-input>
-          </ion-item>
-          <ion-item *ngIf="isValid('address.street')">
-            <span class="invalid-msg">
-              กรุณากรอกข้อมูล
-            </span>
-          </ion-item>
-
-          <ion-item>
-            <ion-input type="text" placeholder="City" formControlName="city" [class.invalid]="isValid('address.city')">
-            </ion-input>
-          </ion-item>
-          <ion-item *ngIf="isValid('address.city')">
-            <span class="invalid-msg">
-              กรุณากรอกข้อมูล
-            </span>
-          </ion-item>
-
-          <ion-item>
-            <ion-input type="text" placeholder="State" formControlName="state"
-              [class.invalid]="isValid('address.state')"></ion-input>
-          </ion-item>
-          <ion-item *ngIf="isValid('address.state')">
-            <span class="invalid-msg">
-              กรุณากรอกข้อมูล
-            </span>
-          </ion-item>
-
-          <ion-item>
-            <ion-input type="text" placeholder="ZipCode" formControlName="zipCode"
-              [class.invalid]="isValid('address.zipCode')"></ion-input>
-          </ion-item>
-          <ion-item *ngIf="isValid('address.zipCode')">
-            <span class="invalid-msg">
-              กรุณากรอกข้อมูล
-            </span>
-          </ion-item>
+          <the-address [FormItem]="user.get('address')"></the-address>
         </ion-list>
       </div>
     </ion-card>
@@ -122,45 +83,7 @@
 
           <!-- School Address -->
           <div formGroupName="schoolAddress">
-            <ion-item>
-              <ion-input type="text" placeholder="Street" formControlName="street"
-                [class.invalid]="isValid('school.schoolAddress.street')"></ion-input>
-            </ion-item>
-            <ion-item *ngIf="isValid('school.schoolAddress.street')">
-              <span class="invalid-msg">
-                กรุณากรอกข้อมูล
-              </span>
-            </ion-item>
-
-            <ion-item>
-              <ion-input type="text" placeholder="City" formControlName="city"
-                [class.invalid]="isValid('school.schoolAddress.city')"></ion-input>
-            </ion-item>
-            <ion-item *ngIf="isValid('school.schoolAddress.city')">
-              <span class="invalid-msg">
-                กรุณากรอกข้อมูล
-              </span>
-            </ion-item>
-
-            <ion-item>
-              <ion-input type="text" placeholder="State" formControlName="state"
-                [class.invalid]="isValid('school.schoolAddress.state')"></ion-input>
-            </ion-item>
-            <ion-item *ngIf="isValid('school.schoolAddress.state')">
-              <span class="invalid-msg">
-                กรุณากรอกข้อมูล
-              </span>
-            </ion-item>
-
-            <ion-item>
-              <ion-input type="text" placeholder="Zip Code" formControlName="zipCode"
-                [class.invalid]="isValid('school.schoolAddress.zipCode')"></ion-input>
-            </ion-item>
-            <ion-item *ngIf="isValid('school.schoolAddress.zipCode')">
-              <span class="invalid-msg">
-                กรุณากรอกข้อมูล
-              </span>
-            </ion-item>
+            <the-address [FormItem]="user.get('school.schoolAddress')"></the-address>
           </div>
         </ion-list>
       </div>

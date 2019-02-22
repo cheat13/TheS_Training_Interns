@@ -1,0 +1,41 @@
+<div [formGroup]="FormItem">
+  <ion-item>
+    <ion-input type="text" placeholder="Street" formControlName="street" [class.invalid]="isValid('street')">
+    </ion-input>
+  </ion-item>
+  <ion-item *ngIf="isValid('street')">
+    <span class="invalid-msg">
+      กรุณากรอกข้อมูล
+    </span>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" placeholder="City" formControlName="city" [class.invalid]="isValid('city')">
+    </ion-input>
+  </ion-item>
+  <ion-item *ngIf="isValid('city')">
+    <span class="invalid-msg">
+      กรุณากรอกข้อมูล here
+    </span>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" placeholder="State" formControlName="state" [class.invalid]="isValid('state')">
+    </ion-input>
+  </ion-item>
+  <ion-item *ngIf="isValid('state')">
+    <span class="invalid-msg">
+      กรุณากรอกข้อมูล
+    </span>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" placeholder="ZipCode" formControlName="zipCode" [class.invalid]="isValid('zipCode')">
+    </ion-input>
+  </ion-item>
+  <ion-item *ngIf="isValid('zipCode')">
+    <span class="invalid-msg">
+      กรุณากรอกข้อมูล
+    </span>
+  </ion-item>
+</div>

@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { TheAddressComponent } from './../../components/the-address/the-address';
+import { Component, ViewChildren } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  
+  @ViewChildren(TheAddressComponent) public theAddress: TheAddressComponent[];
 
   public user: FormGroup;
   private submitRequested: boolean;
@@ -35,7 +38,10 @@ export class HomePage {
   }
 
   onSubmit() {
+    //TODAY 
     this.submitRequested = true;
+    this.theAddress.forEach(it => it.submitRequest());
+    
     console.log(this.user.valid);
     if (this.user.valid) {
       this.navCtrl.push("DemoPage", { user: this.user.value });
