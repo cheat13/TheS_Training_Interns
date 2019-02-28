@@ -34,22 +34,70 @@
   <ion-list>
     <ion-item>
       <ion-label>
-        First Name: {{ form.get('address.street').value }}
+        Street: {{ form.get('address.street').value }}
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
-        Street: {{ form.get('address.city').value }}
+        City: {{ form.get('address.city').value }}
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
-        Street: {{ form.get('address.state').value }}
+        State: {{ form.get('address.state').value }}
       </ion-label>
     </ion-item>
     <ion-item>
       <ion-label>
-        Street: {{ form.get('address.zipCode').value }}
+        ZipCode: {{ form.get('address.zipCode').value }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>
+      <h1>School</h1>
+    </ion-label>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        School Name: {{ form.get('school.schoolName').value }}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        GPA: {{ form.get('school.gpa').value }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>
+      <h1>School Address</h1>
+    </ion-label>
+  </ion-item>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        Street: {{ form.get('school.schoolAddress.street').value }}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        City: {{ form.get('school.schoolAddress.city').value }}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        State: {{ form.get('school.schoolAddress.state').value }}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        ZipCode: {{ form.get('school.schoolAddress.zipCode').value }}
       </ion-label>
     </ion-item>
   </ion-list>
